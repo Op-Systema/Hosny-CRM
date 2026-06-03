@@ -1,16 +1,19 @@
 :root {
-  --bg: #0B1220;
-  --sidebar: #111827;
-  --card: #FFFFFF;
-  --text: #111827;
-  --muted: #6B7280;
-  --gold: #C9A227;
+  --bg: #030303;
+  --sidebar: #000000;
+  --card: #101010;
+  --text: #F8FAFC;
+  --muted: #A3A3A3;
+  --gold: #D6AD2F;
+  --gold-soft: #FFE58A;
+  --gold-dark: #8A6B12;
+  --silver: #E5E7EB;
   --green: #16A34A;
   --red: #DC2626;
   --blue: #2563EB;
-  --border: #E5E7EB;
-  --surface: #F8FAFC;
-  --shadow: 0 18px 45px rgba(15, 23, 42, 0.14);
+  --border: #2A2A2A;
+  --surface: #050505;
+  --shadow: 0 22px 60px rgba(0, 0, 0, 0.58);
   --radius: 8px;
 }
 
@@ -641,6 +644,259 @@ td { color: var(--sidebar); }
   .list-item { align-items: flex-start; flex-direction: column; }
   .chat-bubble { max-width: 100%; }
   .auth-card { padding: 22px; }
+}
+
+/* Hosny black and gold theme */
+body {
+  background:
+    radial-gradient(circle at 50% -10%, rgba(214, 173, 47, 0.17), transparent 30%),
+    linear-gradient(180deg, #060606 0%, #000000 100%);
+  color: var(--text);
+}
+
+.auth-page {
+  background:
+    radial-gradient(circle at 50% 8%, rgba(255, 229, 138, 0.18), transparent 24%),
+    radial-gradient(circle at 82% 72%, rgba(138, 107, 18, 0.14), transparent 28%),
+    #000000;
+}
+
+.auth-card,
+.splash-card,
+.panel,
+.stat-card,
+.assistant-shell,
+.modal-card {
+  background: linear-gradient(180deg, #151515 0%, #0B0B0B 100%);
+  border: 1px solid rgba(214, 173, 47, 0.24);
+  color: var(--text);
+  box-shadow: var(--shadow);
+}
+
+.splash-card {
+  border-color: rgba(255, 229, 138, 0.36);
+}
+
+.brand-logo {
+  width: 76px;
+  height: 76px;
+  flex: 0 0 76px;
+  object-fit: contain;
+  border-radius: var(--radius);
+  background: #000000;
+  border: 1px solid rgba(214, 173, 47, 0.28);
+  box-shadow: 0 14px 34px rgba(214, 173, 47, 0.18);
+}
+
+.hero-logo {
+  width: 128px;
+  height: 128px;
+  margin-bottom: 14px;
+}
+
+.auth-logo h1,
+.splash-card h1,
+.page-header h1,
+.panel h2,
+.panel-head h2,
+.topbar-title,
+.row-title,
+.stat-card strong,
+td {
+  color: var(--text);
+}
+
+.auth-logo p,
+.splash-card p,
+.row-sub,
+th,
+.muted,
+label {
+  color: var(--muted);
+}
+
+.app-shell,
+.main-area {
+  background:
+    linear-gradient(135deg, rgba(214, 173, 47, 0.06), transparent 24%),
+    #050505;
+}
+
+.sidebar {
+  background: linear-gradient(180deg, #000000 0%, #0A0A0A 100%);
+  border-left: 1px solid rgba(214, 173, 47, 0.22);
+}
+
+.side-brand {
+  border-bottom: 1px solid rgba(214, 173, 47, 0.24);
+}
+
+.side-brand .brand-logo {
+  width: 62px;
+  height: 62px;
+  flex-basis: 62px;
+}
+
+.side-brand strong {
+  color: var(--gold-soft);
+}
+
+.side-brand span {
+  color: var(--silver);
+}
+
+.nav-item {
+  color: #C9CED6;
+}
+
+.nav-item.active,
+.nav-item:hover {
+  background: linear-gradient(90deg, rgba(214, 173, 47, 0.24), rgba(214, 173, 47, 0.06));
+  color: #FFFFFF;
+  box-shadow: inset 3px 0 0 var(--gold);
+}
+
+.nav-icon {
+  color: var(--gold-soft);
+}
+
+.side-footer {
+  background: rgba(214, 173, 47, 0.09);
+  border: 1px solid rgba(214, 173, 47, 0.22);
+}
+
+.topbar {
+  background: rgba(0, 0, 0, 0.88);
+  border-bottom: 1px solid rgba(214, 173, 47, 0.22);
+}
+
+.role-badge {
+  background: rgba(214, 173, 47, 0.18);
+  color: var(--gold-soft);
+  border: 1px solid rgba(214, 173, 47, 0.28);
+}
+
+.primary-btn {
+  color: #050505;
+  background: linear-gradient(135deg, #FFE58A 0%, #D6AD2F 52%, #9F7A16 100%);
+  box-shadow: 0 10px 22px rgba(214, 173, 47, 0.2);
+}
+
+.secondary-btn,
+.icon-btn,
+.tab-btn,
+.prompt-btn {
+  background: #171717;
+  color: var(--silver);
+  border: 1px solid rgba(214, 173, 47, 0.22);
+}
+
+.secondary-btn:hover,
+.tab-btn.active,
+.prompt-btn:hover {
+  color: var(--gold-soft);
+  background: rgba(214, 173, 47, 0.14);
+  border-color: rgba(214, 173, 47, 0.46);
+}
+
+.danger-btn {
+  background: #8B1515;
+  color: #FFFFFF;
+}
+
+.text-btn,
+.text-link {
+  color: var(--gold-soft);
+}
+
+input,
+select,
+textarea {
+  background: #090909;
+  color: var(--text);
+  border-color: rgba(214, 173, 47, 0.2);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #777777;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(214, 173, 47, 0.18);
+}
+
+table {
+  color: var(--text);
+}
+
+th,
+td {
+  border-bottom-color: rgba(214, 173, 47, 0.14);
+}
+
+.list-item,
+.mobile-card,
+.branch-card,
+.chat-bubble,
+.kanban-column {
+  background: #101010;
+  border-color: rgba(214, 173, 47, 0.2);
+  color: var(--text);
+}
+
+.kanban-card,
+.timeline-item,
+.output-box {
+  background: #080808;
+  border-color: rgba(214, 173, 47, 0.18);
+  color: var(--text);
+}
+
+.list-item.overdue,
+.kanban-card.overdue {
+  background: rgba(139, 21, 21, 0.22);
+  border-color: rgba(220, 38, 38, 0.5);
+}
+
+.empty-state {
+  color: var(--muted);
+}
+
+.chat-bubble.user {
+  background: linear-gradient(135deg, #D6AD2F, #8A6B12);
+  color: #050505;
+}
+
+.chat-bubble.assistant {
+  background: #111111;
+  color: var(--silver);
+}
+
+.bottom-nav {
+  background: #050505;
+  border-top: 1px solid rgba(214, 173, 47, 0.22);
+}
+
+.bottom-nav a {
+  color: var(--muted);
+}
+
+.bottom-nav a.active {
+  color: var(--gold-soft);
+}
+
+.toast {
+  background: #080808;
+  border: 1px solid rgba(214, 173, 47, 0.22);
+}
+
+.loader {
+  background: rgba(0, 0, 0, 0.72);
+  color: var(--gold-soft);
 }
 
 @media print {

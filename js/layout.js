@@ -38,7 +38,7 @@ function renderLayout(profile) {
   shell.innerHTML = `
     <aside class="sidebar">
       <a class="side-brand" href="dashboard.html">
-        <span class="brand-mark">H</span>
+        <img class="brand-logo" src="${pathToRoot()}assets/hosny-logo.png" alt="Hosny CRM">
         <span><strong>Hosny CRM</strong><span>Franchise Sales</span></span>
       </a>
       <nav class="nav-list">
