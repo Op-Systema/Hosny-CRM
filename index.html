@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hosny CRM</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-page">
+  <div class="splash-card">
+    <div class="brand-mark">H</div>
+    <h1>Hosny CRM</h1>
+    <p>جاري فتح النظام...</p>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase.js"></script>
+  <script>
+    (async () => {
+      const { data } = await window.supabaseClient.auth.getSession();
+      window.location.replace(data.session ? 'dashboard.html' : 'auth/login.html');
+    })();
+  </script>
+</body>
+</html>

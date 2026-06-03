@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>المساعد الذكي | Hosny CRM</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="ai">
+  <main id="pageContent" class="page-content">
+    <div class="page-header">
+      <div>
+        <p class="eyebrow">مساعد محلي بدون ذكاء مدفوع</p>
+        <h1>المساعد الذكي</h1>
+      </div>
+    </div>
+    <section class="assistant-shell">
+      <div id="quickPrompts" class="quick-prompts"></div>
+      <div id="chatLog" class="chat-log"></div>
+      <form id="chatForm" class="chat-form">
+        <input name="prompt" placeholder="اكتب سؤالك هنا..." required>
+        <button class="primary-btn" type="submit">إرسال</button>
+      </form>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/ai.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>المتابعات | Hosny CRM</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="followups">
+  <main id="pageContent" class="page-content">
+    <div class="page-header">
+      <div>
+        <p class="eyebrow">المهام اليومية</p>
+        <h1>المتابعات</h1>
+      </div>
+      <button id="addFollowupBtn" class="primary-btn" type="button">إضافة متابعة</button>
+    </div>
+    <section class="tabs" id="followupTabs"></section>
+    <section class="panel">
+      <div id="followupsList" class="stack-list"></div>
+    </section>
+  </main>
+  <div id="followupModal" class="modal hidden" aria-hidden="true">
+    <div class="modal-card">
+      <div class="panel-head">
+        <h2>إضافة متابعة</h2>
+        <button class="icon-btn" data-close-modal type="button">×</button>
+      </div>
+      <form id="followupForm" class="form-grid modal-form">
+        <label class="full">المستثمر<select name="investor_id" required></select></label>
+        <label>العنوان<input name="title" required></label>
+        <label>تاريخ الاستحقاق<input name="due_date" type="datetime-local" required></label>
+        <label class="full">الوصف<textarea name="description"></textarea></label>
+        <button class="primary-btn full" type="submit">حفظ المتابعة</button>
+      </form>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/followups.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>تفاصيل المستثمر | Hosny CRM</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="investors">
+  <main id="pageContent" class="page-content">
+    <div class="page-header">
+      <div>
+        <p class="eyebrow">ملف المستثمر</p>
+        <h1 id="investorName">جاري التحميل...</h1>
+      </div>
+      <div class="actions-row">
+        <button id="contactNowBtn" class="secondary-btn" type="button">تم التواصل الآن</button>
+        <button id="editInvestorBtn" class="primary-btn" type="button">تعديل</button>
+      </div>
+    </div>
+    <section class="content-grid two">
+      <article id="profilePanel" class="panel"></article>
+      <article class="panel">
+        <div class="panel-head">
+          <h2>إجراءات ذكية</h2>
+        </div>
+        <div class="actions-grid">
+          <button id="whatsappBtn" class="secondary-btn" type="button">رسالة واتساب</button>
+          <button id="objectionBtn" class="secondary-btn" type="button">رد اعتراض</button>
+          <button id="addFollowupBtn" class="secondary-btn" type="button">إضافة متابعة</button>
+          <button id="addMeetingBtn" class="secondary-btn" type="button">إضافة اجتماع</button>
+        </div>
+        <textarea id="smartOutput" class="output-box" readonly placeholder="ستظهر هنا الرسائل الذكية"></textarea>
+      </article>
+    </section>
+    <section class="content-grid two">
+      <article class="panel">
+        <div class="panel-head"><h2>المتابعات</h2></div>
+        <div id="followupsList" class="stack-list"></div>
+      </article>
+      <article class="panel">
+        <div class="panel-head"><h2>الاجتماعات</h2></div>
+        <div id="meetingsList" class="stack-list"></div>
+      </article>
+    </section>
+    <section class="panel">
+      <div class="panel-head"><h2>الخط الزمني</h2></div>
+      <div id="timelineList" class="timeline"></div>
+    </section>
+  </main>
+  <div id="quickModal" class="modal hidden" aria-hidden="true">
+    <div class="modal-card">
+      <div class="panel-head">
+        <h2 id="quickTitle">إضافة</h2>
+        <button class="icon-btn" data-close-modal type="button">×</button>
+      </div>
+      <form id="quickForm" class="form-grid modal-form"></form>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/investor-details.js"></script>
+</body>
+</html>

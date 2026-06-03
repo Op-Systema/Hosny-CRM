@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>الفروع | Hosny CRM</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="branches">
+  <main id="pageContent" class="page-content">
+    <div class="page-header">
+      <div>
+        <p class="eyebrow">شبكة الفروع</p>
+        <h1>الفروع</h1>
+      </div>
+      <button id="addBranchBtn" class="primary-btn admin-only" type="button">إضافة فرع</button>
+    </div>
+    <section class="panel">
+      <div id="branchesGrid" class="card-grid"></div>
+    </section>
+  </main>
+  <div id="branchModal" class="modal hidden" aria-hidden="true">
+    <div class="modal-card">
+      <div class="panel-head">
+        <h2 id="branchModalTitle">إضافة فرع</h2>
+        <button class="icon-btn" data-close-modal type="button">×</button>
+      </div>
+      <form id="branchForm" class="form-grid modal-form">
+        <input type="hidden" name="id">
+        <label>اسم الفرع<input name="branch_name" required></label>
+        <label>المدينة<input name="city"></label>
+        <label>المنطقة<input name="area"></label>
+        <label>الحالة<input name="status"></label>
+        <label>اسم المالك<input name="owner_name"></label>
+        <label>تاريخ الافتتاح<input name="opening_date" type="date"></label>
+        <label>خط العرض<input name="latitude" type="number" step="any"></label>
+        <label>خط الطول<input name="longitude" type="number" step="any"></label>
+        <button class="primary-btn full" type="submit">حفظ الفرع</button>
+      </form>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/branches.js"></script>
+</body>
+</html>

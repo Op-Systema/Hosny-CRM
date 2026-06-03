@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>المستخدمون | Hosny CRM</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="users">
+  <main id="pageContent" class="page-content">
+    <div class="page-header">
+      <div>
+        <p class="eyebrow">إدارة الفريق</p>
+        <h1>المستخدمون</h1>
+      </div>
+    </div>
+    <section class="panel">
+      <div class="responsive-table">
+        <table>
+          <thead><tr><th>الاسم</th><th>البريد</th><th>الدور</th><th>الحالة</th><th>المستثمرون</th><th>إجراءات</th></tr></thead>
+          <tbody id="usersTable"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/users.js"></script>
+</body>
+</html>

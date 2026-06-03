@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>تسجيل الدخول | Hosny CRM</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="auth-page">
+  <section class="auth-card">
+    <div class="auth-logo">
+      <div class="brand-mark">H</div>
+      <div>
+        <h1>Hosny CRM</h1>
+        <p>إدارة فرص الفرنشايز باحتراف</p>
+      </div>
+    </div>
+    <form id="loginForm" class="form-grid">
+      <label>البريد الإلكتروني
+        <input type="email" name="email" required autocomplete="email">
+      </label>
+      <label>كلمة المرور
+        <input type="password" name="password" required autocomplete="current-password">
+      </label>
+      <button class="primary-btn" type="submit">تسجيل الدخول</button>
+      <p id="authMessage" class="form-message"></p>
+    </form>
+    <div class="auth-links">
+      <a href="signup.html">إنشاء حساب جديد</a>
+      <a href="forgot-password.html">نسيت كلمة المرور؟</a>
+    </div>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../js/supabase.js"></script>
+  <script src="../js/utils.js"></script>
+  <script src="../js/auth.js"></script>
+</body>
+</html>

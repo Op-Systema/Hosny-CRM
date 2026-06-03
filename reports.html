@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>التقارير | Hosny CRM</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="reports">
+  <main id="pageContent" class="page-content">
+    <div class="page-header">
+      <div>
+        <p class="eyebrow">تحليلات الأداء</p>
+        <h1>التقارير</h1>
+      </div>
+      <button id="printBtn" class="primary-btn" type="button">طباعة / تصدير</button>
+    </div>
+    <section id="reportStats" class="stats-grid"></section>
+    <section class="content-grid two">
+      <article class="panel chart-panel"><h2>العملاء حسب المصدر</h2><canvas id="sourceChart"></canvas></article>
+      <article class="panel chart-panel"><h2>المستثمرون حسب المرحلة</h2><canvas id="stageChart"></canvas></article>
+      <article class="panel chart-panel"><h2>العقود المغلقة شهريا</h2><canvas id="closedChart"></canvas></article>
+      <article class="panel chart-panel"><h2>إنجاز المتابعات</h2><canvas id="followupChart"></canvas></article>
+    </section>
+    <section id="salesPanel" class="panel admin-only">
+      <div class="panel-head"><h2>أداء فريق المبيعات</h2></div>
+      <div id="salesPerformance" class="stack-list"></div>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/reports.js"></script>
+</body>
+</html>
